@@ -63,3 +63,13 @@ net.ipv4.tcp_max_tw_buckets = 5000 ##已经修改
 ```
 
 FROM: <http://www.zhanghaijun.com/post/894/>
+
+
+#Proxy
+
+```
+
+export http_proxy=http://192.168.88.1:3128/
+export ftp_proxy=http://192.168.88.1:3128/
+
+```
