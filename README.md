@@ -73,3 +73,11 @@ export http_proxy=http://192.168.88.1:3128/
 export ftp_proxy=http://192.168.88.1:3128/
 
 ```
+
+
+#Linux Core Header source
+
+```
+aptitude install module-assistant  
+m-a prepare
+```
