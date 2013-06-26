@@ -73,6 +73,17 @@ export http_proxy=http://192.168.88.1:3128/
 export ftp_proxy=http://192.168.88.1:3128/
 
 ```
+#limit
+
+* /etc/security/limits.conf 
+
+```
+*		soft	nofile		1024000
+root		soft	nofile		1024000
+*		hard	nofile		1024000
+root		hard	nofile		1024000
+
+```
 
 
 #Linux Core Header source
