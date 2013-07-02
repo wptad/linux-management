@@ -92,3 +92,17 @@ root		hard	nofile		1024000
 aptitude install module-assistant  
 m-a prepare
 ```
+
+
+#tcpdump 
+
+```
+tcpdump -i eth1
+
+tcpdump -i eth2 'port 22'
+
+```
+
+TCPDump: Capture and Record Specific Protocols / Port
+
+<http://www.cyberciti.biz/faq/tcpdump-capture-record-protocols-port/>
