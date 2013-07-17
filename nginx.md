@@ -11,16 +11,22 @@ error_page 502 /client/error.html;
 ## upstream  
 
 ```
-upstream backend  {
-  server backend1.example.com weight=5;
-  server backend2.example.com:8080;
-  server unix:/tmp/backend3;
-}
- 
 server {
-  location / {
-    proxy_pass  http://backend;
-  }
+	listen *:80;
+	server_name domainName;
+
+	upstream backend {
+      ip_hash;
+      server   192.168.88.1  weight=2;
+      server   192.168.88.2  max_fails=3  fail_timeout=30s;
+      server   192.168.88.3  down;
+      server   192.168.88.4;
+    }
+
+    location / {
+        proxy_pass http://bakend/;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
 }
 
 ```
