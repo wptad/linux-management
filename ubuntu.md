@@ -1,4 +1,16 @@
 #Ubuntu
+## install from USB 
+
+* USB installer
+<http://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-1.9.3.7.exe>
+
+* winodws chksum tool
+
+<http://jaist.dl.sourceforge.net/project/winchksum/winchksum-1.0/winchksum.exe>
+
+* download link for 12.04.2
+
+<http://releases.ubuntu.com/12.04/ubuntu-12.04.2-desktop-amd64.iso.torrent>
 
 ## change root password
 
