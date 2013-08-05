@@ -1,3 +1,8 @@
+#umask
+
+* <http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html>
+
+* <http://en.wikipedia.org/wiki/Umask>
 
 #netstat
 * check which connection is abnormal
