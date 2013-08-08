@@ -39,3 +39,8 @@ location ~ \.php$ {
 
 * <http://www.mkfoster.com/2009/01/04/how-to-install-a-php-pecl-extensionmodule-on-ubuntu/>
 * <http://www.php.net/manual/en/mongo.installation.php#mongo.installation.manual>
+
+
+##Mac
+
+```brew install --with-cgi php54```
