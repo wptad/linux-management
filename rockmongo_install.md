@@ -44,3 +44,5 @@ location ~ \.php$ {
 ##Mac
 
 ```brew install --with-cgi php54```
+
+* <http://rtcamp.com/wordpress-nginx/tutorials/mac-osx-brew-php-mysql-nginx/>
