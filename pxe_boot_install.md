@@ -101,3 +101,9 @@ TFTP_OPTIONS="--secure"
 * Document <https://wiki.debian.org/PXEBootInstall>
 
 
+
+##IPMI 
+
+* download: <ftp://ftp.supermicro.com/utility/IPMIView/>
+* Reference: <http://christian.hofstaedtler.name/blog/2010/05/lessons-learned-with-supermicros-remote-managementipmi-view.html>
+
