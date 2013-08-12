@@ -13,3 +13,14 @@
 
 * custom module
 <http://hugozhu.myalert.info/2013/04/13/28-use-tsar-to-monitor-raspberry-pi.html>
+
+##HDD stats
+* 可以查询硬盘使用时间等信息
+
+` aptitude install smartmontools`
+
+` smartctl -a /dev/sda`
+
+
+* Reference: <http://www.cyberciti.biz/tips/linux-find-out-if-harddisk-failing.html>
+* Reference: <http://packages.debian.org/sid/smartmontools>
