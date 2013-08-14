@@ -25,3 +25,9 @@
 * Reference: <http://www.cyberciti.biz/tips/linux-find-out-if-harddisk-failing.html>
 * Reference: <http://packages.debian.org/sid/smartmontools>
 * Reference: <http://www.cyberciti.biz/tips/monitoring-hard-disk-health-with-smartd-under-linux-or-unix-operating-systems.html>
+
+
+## CPU info
+
+* how calculate cpu info
+* <http://www.blogjava.net/fjzag/articles/317773.html>
