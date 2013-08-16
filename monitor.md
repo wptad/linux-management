@@ -31,3 +31,7 @@
 
 * how calculate cpu info
 * <http://www.blogjava.net/fjzag/articles/317773.html>
+
+## sar
+
+* <http://www.leonardoborda.com/blog/how-to-configure-sysstatsar-on-ubuntudebian/>
