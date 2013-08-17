@@ -1,5 +1,7 @@
 #SSH 
 
+* `ssh -L 3202:192.168.1.202:80 root@11.25.22.13`
+
 * SSH port forwarding: <http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html>
 
 #umask
