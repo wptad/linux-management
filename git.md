@@ -1,3 +1,22 @@
+#git push
+
+`git push origin localBranchName:remoteBranchName`
+
+#git pull
+`git push origin remoteBranchName`
+
+#git branch
+
+* list branch 
+
+`git branch`
+
+* create new branch 
+
+`git branch newBranchName`
+
+
+
 #gitstats
 
 
