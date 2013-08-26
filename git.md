@@ -17,6 +17,61 @@
 
 
 
+# Setup
+
+* Git global setup:
+
+```
+  git config --global user.name "Tad Wang"
+  git config --global user.email "wptad@tom.com"
+```
+
+* Create Repository
+
+<pre>
+
+mkdir test_empty
+cd test_empty
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@127.0.0.1:test_empty.git
+git push -u origin master
+</pre>
+
+* Existing Git Repo?
+
+<pre>
+cd existing_git_repo
+git remote add origin git@127.0.0.1:test_empty.git
+git push -u origin master
+
+</pre>
+
+## SSH-KEYGEN
+<pre>
+  cd .ssh/
+  ssh-keygen -t rsa -C "wptad@tom.com"
+</pre>
+
+## 放弃跟踪文件
+
+
+有时候，你不希望某些文件或者文件夹被包含在Git仓库中。但是如果你把它们加到.gitignore文件中以后，Git会停止跟踪这个文件。但是它不会将这个文件从仓库中删除。这导致了文件或者文件夹的最后一个版本还是存在于仓库中。为了取消跟踪这些文件或者文件夹，你可以使用如下的命令
+
+<pre>
+# Remove directory .metadata from git repo
+git rm -r --cached .metadata
+# Remove file test.txt from repo
+git rm --cached test.txt
+</pre>
+
+## Document
+*[http://www.cnblogs.com/zhangjing230/archive/2012/05/09/2489745.html Git教程]
+*[http://blog.prosight.me/index.php/2009/07/274 创建和修改项目]
+
+
 #gitstats
 
 
