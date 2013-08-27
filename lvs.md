@@ -11,3 +11,5 @@
 * reload `ipvsadm --restore < /etc/ipvsadm.rules`
 
 * check rules: `ipvsadm -Ln`
+
+* Refer: <http://kb.linuxvirtualserver.org/wiki/Ipvsadm>
