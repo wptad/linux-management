@@ -96,6 +96,7 @@ root		hard	nofile		1024000
 
 ```
 
+* refer<http://alancastro.org/2010/09/07/increase-the-number-of-opened-files-on-debian-linux.html>
 
 #Linux Core Header source
 
