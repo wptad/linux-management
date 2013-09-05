@@ -1,5 +1,19 @@
 #nginx 
-* error page
+
+
+
+
+## server_name
+
+
+* `_` means other domain
+* `""` means direct ip ???
+
+
+Refer: <http://nginx.org/en/docs/http/server_names.html>
+
+
+##error page
 
 
 
