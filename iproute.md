@@ -9,7 +9,9 @@ ip route flush table cnc
 ip route add default via 192.168.1.1 dev eth0 table cnc
 ip rule add from 192.168.1.2 table cnc
 
-
+ip route flush table isp1
+ip route add default via 192.168.1.12 dev eth1 table tel
+ip rule add from 192.168.1.101 table tel
 
 
 ip route add 192.168.1.200 netmask 255.255.255.0
