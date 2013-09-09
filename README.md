@@ -84,19 +84,6 @@ export http_proxy=http://192.168.88.1:3128/
 export ftp_proxy=http://192.168.88.1:3128/
 
 ```
-#limit
-
-* /etc/security/limits.conf 
-
-```
-*		soft	nofile		1024000
-root		soft	nofile		1024000
-*		hard	nofile		1024000
-root		hard	nofile		1024000
-
-```
-
-* refer<http://alancastro.org/2010/09/07/increase-the-number-of-opened-files-on-debian-linux.html>
 
 #Linux Core Header source
 
@@ -112,6 +99,10 @@ m-a prepare
 tcpdump -i eth1
 
 tcpdump -i eth2 'port 22'
+
+
+tcpdump -qnn
+
 
 ```
 
