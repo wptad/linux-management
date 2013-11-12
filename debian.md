@@ -23,6 +23,11 @@ update-rc.d gdm3 default
 ```
 * <http://www.debianadmin.com/howto-boot-debian-in-text-mode-instead-of-graphical-mode-gui.html>
 
+## input 
+
+<http://blog.csdn.net/fallen_devil/article/details/8576334>
+
+
 ## interface setting template
 
 ```
