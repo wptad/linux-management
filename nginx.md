@@ -1,6 +1,14 @@
 #nginx 
 
+## Proxy set header
 
+```
+
+proxy_set_header Host $http_host;
+proxy_set_header X-Forward-For $remote_addr;
+
+
+```
 
 
 ## server_name
