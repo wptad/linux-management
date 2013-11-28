@@ -1,4 +1,11 @@
+# install
 
+
+```
+sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
+```
+
+* <https://www.digitalocean.com/community/articles/how-to-install-git-on-ubuntu-12-04>
 #global ignore
 
 * Unix: 
