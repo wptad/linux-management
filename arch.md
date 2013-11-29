@@ -9,6 +9,9 @@ pacman -S net-tools dnsutils inetutils iproute2
 ##  enable dhcp
 
 * 动态 IP
+
+
+
 ```
 使用 dhcpcd
 如果你只使用一个单一的固定有线网络连接,你并不需要网络管理服务的话,你可以简单的使用 dhcpcd 服务. 在这里, interface_name 是你的网卡名称:
@@ -28,7 +31,6 @@ pacman -S net-tools dnsutils inetutils iproute2
 >> nano my-network
 启用这个 my-network 配置:
 >> netctl enable my-network
-
 
 ```
 
