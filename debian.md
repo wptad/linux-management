@@ -1,11 +1,21 @@
 #deiban 
 
 
-<http://backports.debian.org/debian-backports/dists/squeeze-backports/>
+
+* <http://backports.debian.org/debian-backports/dists/squeeze-backports/>
+
+## debian Install with SataRaid
+
+* <https://wiki.debian.org/DebianInstaller/SataRaid>
+
+### NetXtreme II 10 Gigabit Driver Downloads
+
+* <http://www.broadcom.com/support/ethernet_nic/netxtremeii10.php>
+* <http://www.broadcom.com/support/license.php?file=NXII_10/linux-7.8.56.zip>
 
 ##update core
 
-<http://www.cnblogs.com/coding-way/archive/2012/01/08/2316221.html>
+* <http://www.cnblogs.com/coding-way/archive/2012/01/08/2316221.html>
 
 * Upgrade Debian 6.0 Squeeze to 7.0 Wheezy <http://www.garron.me/en/linux/upgrade-debian-squeeze-wheezy-6.0-7.0.html>
 
