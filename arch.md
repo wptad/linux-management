@@ -61,5 +61,7 @@ systemctl [start | stop | restart | enable | disable] smbd
 pacman -S openssh
 
 systemctl start sshd
+
+echo 'SSHD: ALL' >> /etc/hosts.allow
 ```
 * <http://www.unixmen.com/how-to-install-openssh-in-archinux/>

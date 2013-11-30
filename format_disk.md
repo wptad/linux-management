@@ -1,5 +1,8 @@
 #format disk
 
+
+## fdisk
+
 `fdisk /dev/sdb`
 
 ```
@@ -41,3 +44,15 @@ Calling ioctl() to re-read partition table.
 
 
 `mkfs.ext2 -b 4096 -t ext2 /dev/sdb1`
+
+
+
+## check uuid
+
+```
+blkid
+```
+
+refer: 
+* <http://linuxg.net/3-ways-to-get-the-hard-drives-uuid/>
+* <https://help.ubuntu.com/community/UsingUUID>
