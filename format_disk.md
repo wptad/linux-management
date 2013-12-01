@@ -56,3 +56,10 @@ blkid
 refer: 
 * <http://linuxg.net/3-ways-to-get-the-hard-drives-uuid/>
 * <https://help.ubuntu.com/community/UsingUUID>
+
+
+## SSD
+
+* enable TRIM
+
+<http://www.linuxidc.com/Linux/2012-09/70519.htm>
