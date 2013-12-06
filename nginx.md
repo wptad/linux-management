@@ -9,7 +9,10 @@ proxy_set_header X-Forward-For $remote_addr;
 
 
 ```
+## Nginx错误日志分析
 
+* <http://cjhust.blog.163.com/blog/static/175827157201271455831385/>
+* <http://www.kzhns.com/?p=32>
 
 ## server_name
 
