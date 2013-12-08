@@ -1,5 +1,16 @@
 #NIC
 
+# install module command
+* modinfo MODULE_NAME
+* lsmod
+* lspci
+* modprobe module
+* depmod
+
+
+# depmod
+
+* <http://blog.chinaunix.net/uid-16330130-id-2747402.html>
 
 #Intel
 
