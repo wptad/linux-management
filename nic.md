@@ -4,8 +4,15 @@
 * modinfo MODULE_NAME
 * lsmod
 * lspci
+* lspci -v
 * modprobe module
 * depmod
+
+
+
+5) Rebuild the kernel module dependencies
+-> depmod -a
+-> insmod ./src/r8168.ko
 
 
 # depmod
