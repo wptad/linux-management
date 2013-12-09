@@ -7,10 +7,12 @@
 * lspci -v
 * modprobe module
 * depmod
+* modprobe –v qla4xxx  // load driver
+* modprobe –r qla4xxx  // upload driver
 
 
 
-5) Rebuild the kernel module dependencies
+*　Rebuild the kernel module dependencies
 -> depmod -a
 -> insmod ./src/r8168.ko
 
