@@ -15,6 +15,57 @@
 
 ##update core
 
+* Add the backports repository to your /etc/apt/sources.list.
+
+```
+## DEBIAN
+deb http://ftp.us.debian.org/debian/ wheezy main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ wheezy main contrib non-free
+
+## DEBIAN-SECURITY
+deb http://security.debian.org/ wheezy/updates main contrib non-free
+deb-src http://security.debian.org/ wheezy/updates main contrib non-free
+
+## DEBIAN-UPDATES 
+deb http://ftp.us.debian.org/debian/ wheezy-updates main contrib non-free 
+deb-src http://ftp.us.debian.org/debian/ wheezy-updates main contrib non-free
+
+## DEBIAN-BACKPORTS
+deb http://ftp.us.debian.org/debian/ wheezy-backports main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ wheezy-backports main contrib non-free
+```
+
+
+*  Determine which kernel and firmware images you have installed.
+
+
+```
+# To track the latest backports kernel image you want the kernel image metapackage.
+# It should be something like linux-image-amd64 or linux-image-rt-amd64.
+aptitude search linux-image | grep -E '^i'
+
+# You will also need to upgrade the binary firmware to the version from backports.
+# This should be something like firmware-linux and firmware-iwlwifi.
+aptitude search firmware | grep -E '^i'
+```
+
+* Install the latest kernel and firmware images from backports.
+
+```
+sudo apt-get update
+
+# Replace the linux-image, linux-headers, and firmware packages below with the ones you have installed.
+apt-get install -t wheezy-backports linux-image-3.9-0.bpo.1-amd64  linux-headers-3.9-0.bpo.1-amd64  firmware-linux  firmware-bnx2x
+
+sudo reboot
+
+```
+
+
+
+
+* <http://www.neowin.net/forum/topic/1162482-debian-backport-kernel/>
+
 * <http://www.cnblogs.com/coding-way/archive/2012/01/08/2316221.html>
 
 * Upgrade Debian 6.0 Squeeze to 7.0 Wheezy <http://www.garron.me/en/linux/upgrade-debian-squeeze-wheezy-6.0-7.0.html>

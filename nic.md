@@ -16,6 +16,7 @@
 -> depmod -a
 -> insmod ./src/r8168.ko
 
+<https://wiki.archlinux.org/index.php/Kernel_modules#Loading>
 
 # depmod
 
