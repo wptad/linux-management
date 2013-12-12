@@ -10,41 +10,6 @@
 
 * <http://en.wikipedia.org/wiki/Umask>
 
-#netstat
-* check which connection is abnormal
-
-```
-
-netstat -nt | cut -c 40- | cut -d: -f1 | sort | uniq -c | sort -n
-
-OR
-
-amount-port-ip
-
-netstat -nt | cut -d: -f2 | sort | uniq -c | sort -n
-
-```
-
-* check all connection status
-
-
-```
-netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}' 
-
-TIME_WAIT 5009
-FIN_WAIT1 19
-ESTABLISHED 3
-FIN_WAIT2 2
-SYN_RECV 14
-CLOSING 146
-LAST_ACK 1
-
-
-netstat -tuan | grep ':9999' | awk '{arr[$6]++}END{for (i in arr){print i,arr[i]}}'
-
-```
-
-
 
 
 #sysctl.conf
