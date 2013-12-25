@@ -1,6 +1,13 @@
 #format disk
 
 
+## ext4
+
+
+```
+mkfs.ext4 -O ^has_journal -t ext4 -b 4096 /dev/sdb1 
+```
+
 ## fdisk
 
 `fdisk /dev/sdb`
