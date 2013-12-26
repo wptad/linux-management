@@ -69,4 +69,12 @@ refer:
 
 * enable TRIM
 
+```
+/dev/sda1 / ext4 discard,defaults
+```
 <http://www.linuxidc.com/Linux/2012-09/70519.htm>
+
+## mount  --bind
+
+
+<http://www.cnitblog.com/gouzhuang/archive/2010/04/21/mount_bind.html>

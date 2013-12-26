@@ -1,3 +1,31 @@
+## make large file
+
+```
+fallocate -l 10G gentoo_root.img
+
+OR
+
+truncate -s 10M output.file
+
+OR
+
+dd if=/dev/zero of=filename bs=1 count=1 seek=1048575
+
+OR
+
+mkfile 10240m 10Gigfile
+
+```
+
+## how delete lots of files
+
+```
+ls -1 | wc -l && time find . -type f -delete
+
+```
+Refer: <http://www.stevekamerman.com/2008/03/deleting-tons-of-files-in-linux-argument-list-too-long/>
+
+
 #SSH 
 
 * `ssh -L 3202:192.168.1.202:80 root@11.25.22.13`
