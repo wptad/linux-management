@@ -73,8 +73,9 @@ refer:
 /dev/sda1 / ext4 discard,defaults
 ```
 <http://www.linuxidc.com/Linux/2012-09/70519.htm>
+* <http://www.mabishu.com/blog/2012/12/14/get-better-performance-and-life-from-your-ssd-in-linux-based-systems/>
 
 ## mount  --bind
 
-
-<http://www.cnitblog.com/gouzhuang/archive/2010/04/21/mount_bind.html>
+* <http://backdrift.org/how-to-use-bind-mounts-in-linux>
+* <http://www.cnitblog.com/gouzhuang/archive/2010/04/21/mount_bind.html>
