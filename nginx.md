@@ -3,28 +3,13 @@
 
 ## install deiban
 
-
 ```
-#Start with downloading and installing PGP keys
-wget -O key http://nginx.org/keys/nginx_signing.key && sudo apt-key add key && sudo rm -f key
+deb http://ftp.debian.org/debian wheezy-backports main contrib non-free
+deb-src http://ftp.debian.org/debian wheezy-backports main contrib non-free
 
-#Add these lines to /etc/apt/sources.list
-deb http://nginx.org/packages/debian/ squeeze nginx
-deb-src http://nginx.org/packages/debian/ squeeze nginx
-
-#Update apt lists
-sudo apt-get update
-
-#Upgrade or install nginx
-sudo apt-get upgrade
-#or
-sudo apt-get install nginx
-
+aptitude update
+aptitude -t wheezy-backports install nginx-full
 ```
-
-
-
-<http://oskarhane.com/install-nginx-stable-1-4-1-on-debian-squeeze/>
 
 ## Proxy set header
 
