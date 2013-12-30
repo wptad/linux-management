@@ -102,3 +102,10 @@ tcpdump -qnn
 TCPDump: Capture and Record Specific Protocols / Port
 
 <http://www.cyberciti.biz/faq/tcpdump-capture-record-protocols-port/>
+
+# dig
+
+```
+apt-get install bind-utils
+```
+
