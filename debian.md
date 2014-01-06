@@ -1,5 +1,18 @@
 #deiban 
 
+## debian Chinese apt source
+
+```
+deb http://ftp.cn.debian.org/debian wheezy main
+deb-src http://ftp.cn.debian.org/debian wheezy main
+
+deb http://ftp.cn.debian.org/debian wheezy-updates main
+deb-src http://ftp.cn.debian.org/debian wheezy-updates main
+
+deb http://security.debian.org/ wheezy/updates main
+deb-src http://security.debian.org/ wheezy/updates main
+
+```
 
 
 * <http://backports.debian.org/debian-backports/dists/squeeze-backports/>
