@@ -15,7 +15,7 @@ Reference
 <http://www.devttys0.com/2012/11/reverse-engineering-serial-ports/>
 
 ```
-screen /dev/tty.usbserial-A9YL1Z3B 115200,-parenb,-cstopb,cs8
+screen /dev/ttyUSB0 115200,-parenb,-cstopb,cs8
 ```
 
 
@@ -28,3 +28,8 @@ mtd erase nvram
 mtd -r write /tmp/firmware.bin linux
 
 ```
+
+
+## CH340G TTL driver
+
+<http://www.wch.cn/download/list.asp?id=178>
