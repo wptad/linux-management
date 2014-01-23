@@ -76,3 +76,10 @@ iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 iptables -I FORWARD -p tcp --tcp-flags SYN,RST SYN -s 10.9.8.0/24 -j TCPMSS  --clamp-mss-to-pmtu
 
 ```
+
+
+
+# Auto select route
+
+
+* <http://code.google.com/p/chnroutes/>
