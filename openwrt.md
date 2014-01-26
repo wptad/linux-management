@@ -4,11 +4,24 @@ Reference
 
 * <http://manoftoday.wordpress.com/2007/10/11/writing-and-compiling-a-simple-program-for-openwrt/>
 
+*download: <http://downloads.openwrt.org/attitude_adjustment/12.09/ramips/rt288x/>
+
+
 # compile 
 
 * ubuntu requirement
+* <http://wiki.openwrt.org/doc/howto/buildroot.exigence>
 ```
 sudo apt-get install subversion git flex g++ gawk zlib1g-dev libncurses5-dev
+
+make defconfig
+make prereq
+make menuconfig
+
+make toolchain/clean
+make toolchain/install
+make V=99
+
 
 ```
 
