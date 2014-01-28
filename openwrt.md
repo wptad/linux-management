@@ -25,6 +25,17 @@ make V=99
 
 ```
 
+# troubleshoot
+* <https://dev.openwrt.org/ticket/11897#no2>
+```
+make: *** [world] Error 2
+
+>> make dirclean
+
+Your tree is unclean and the toolchain needs a rebuild - "make dirclean" will fix the issue above.
+
+``
+
 # mtd bakup
 
 * <http://www.haiyun.me/archives/openwrt-mtd-sysupgrade.html>
