@@ -1,5 +1,23 @@
 #redis
 
+## Official Redis packages for Debian "squeeze"
+
+Add the following line to /etc/apt/sources.list:
+
+
+```
+deb http://backports.debian.org/debian-backports squeeze-backports main
+
+```
+
+```
+sudo apt-get update
+sudo apt-get -t squeeze-backports install redis-server
+
+```
+
+
+
 ## install latest version in debian
 
 ```
