@@ -119,3 +119,27 @@ iface eth0 inet static
         # dns-* options are implemented by the resolvconf package, if installed
         dns-nameservers 202.102.227.68
 ```
+
+Bridge mode
+
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
+   pre-up   ifconfig $IFACE up
+   pre-down ifconfig $IFACE down
+
+
+auto br0
+allow-hotplug br0
+iface br0 inet static
+	bridge_ports eth0
+	address 192.168.100.2
+	netmask 255.255.255.0
+	gateway 192.168.100.1
+
+
+```
