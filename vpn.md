@@ -1,6 +1,27 @@
 #open vpn
 
-`sudo apt-get install openssl openvpn`
+
+```
+
+sudo apt-get install openssl openvpn
+
+cp -R /usr/share/doc/openvpn/examples/easy-rsa /etc/openvpn
+cd /etc/openvpn/easy-rsa/2.0
+
+```
+
+* EDIT: vars, change environment, at the bottom
+
+```
+sudo nano vars
+
+```
+
+```
+. ./vars
+
+```
+
 
 Reference: <http://aproductivelife.blogspot.jp/2010/03/tutorial-on-how-to-setup-openvpn-server.html>
 
@@ -12,7 +33,7 @@ Reference: <http://aproductivelife.blogspot.jp/2010/03/tutorial-on-how-to-setup-
 
 ```
 client-config-dir ccd
-push "route 192.168.1.0 255.255.255.0"
+push "route 192.168.1.0 255.255.255.0"  // router internal network
 route 192.168.5.0 255.255.255.0
 port 1194
 proto udp
@@ -37,6 +58,25 @@ verb 3
 
 ```
 iroute 192.168.5.0 255.255.255.0
+
+```
+
+* client configure file
+
+```
+client
+dev tun
+proto udp
+remote 10.10.11.200 1194
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca ca.crt
+cert tad_office_router.crt
+key tad_office_router.key
+comp-lzo
+verb 3
 
 ```
 
