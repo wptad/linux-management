@@ -17,18 +17,44 @@ sudo nano vars
 
 ```
 
-```
-. ./vars
+## build ca
 
 ```
+. ./vars   #OR source ./vars
 
+./clean-all 
+./build-ca
+```
+##build server keys
 
-Reference: <http://aproductivelife.blogspot.jp/2010/03/tutorial-on-how-to-setup-openvpn-server.html>
+```
+./build-key-server server
+```
 
-* <https://forums.openvpn.net/topic8406.html>
-* <http://blog.remibergsma.com/2013/01/05/building-an-economical-openvpn-server-using-the-raspberry-pi/>
+##build client keys
 
+```
+./build-key client1
+```
 
+##generate Diffie Hellman paramaters
+
+```
+./build-dh
+```
+
+##Placing the Server Keys and Creating Server Config
+
+* in keys folder
+```
+cd keys
+cp ca.crt ca.key dh1024.pem server.crt server.key /etc/openvpn
+```
+
+```
+sudo nano /etc/openvpn/openvpn.conf
+
+```
 * openvpn.conf
 
 ```
@@ -61,6 +87,21 @@ iroute 192.168.5.0 255.255.255.0
 
 ```
 
+## start service
+
+```
+/etc/init.d/openvpn start
+```
+
+## get client files
+
+```
+client.crt
+client.key
+ca.crt
+config.ovpn
+```
+
 * client configure file
 
 ```
@@ -80,6 +121,12 @@ verb 3
 
 ```
 
+Reference: <http://aproductivelife.blogspot.jp/2010/03/tutorial-on-how-to-setup-openvpn-server.html>
+
+* <https://forums.openvpn.net/topic8406.html>
+* <http://blog.remibergsma.com/2013/01/05/building-an-economical-openvpn-server-using-the-raspberry-pi/>
+
+
 
 * iptables
 
@@ -88,8 +135,6 @@ iptables -t nat -A POSTROUTING -s 172.17.0.0/24 -o eth1 -j MASQUERADE
 iptables -A FORWARD -s 172.17.0.0/24 -o eth1 -j ACCEPT
 iptables -A FORWARD -i eth1 -o tun0 -m state --state ESTABLISHED,RELATED -j ACCEPT
 ```
-
-
 
 
 #PPTP
