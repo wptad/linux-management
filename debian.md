@@ -48,6 +48,23 @@ deb http://ftp.us.debian.org/debian/ wheezy-backports main contrib non-free
 deb-src http://ftp.us.debian.org/debian/ wheezy-backports main contrib non-free
 ```
 
+OR China site:
+
+```
+
+deb http://mirrors.sohu.com/debian/ wheezy main
+deb-src http://mirrors.sohu.com/debian/ wheezy main
+
+deb http://security.debian.org/ wheezy/updates main
+deb-src http://security.debian.org/ wheezy/updates main
+
+deb http://mirrors.sohu.com/debian/ wheezy-updates main
+deb-src http://mirrors.sohu.com/debian/ wheezy-updates main
+
+deb http://mirrors.sohu.com/debian/ wheezy-backports main
+deb-src http://mirrors.sohu.com/debian/ wheezy-backports main
+
+```
 
 *  Determine which kernel and firmware images you have installed.
 
@@ -68,7 +85,7 @@ aptitude search firmware | grep -E '^i'
 sudo apt-get update
 
 # Replace the linux-image, linux-headers, and firmware packages below with the ones you have installed.
-apt-get install -t wheezy-backports linux-image-3.9-0.bpo.1-amd64  linux-headers-3.9-0.bpo.1-amd64  firmware-linux  firmware-bnx2x
+apt-get install -t wheezy-backports linux-image-3.12-0.bpo.1-amd64  linux-headers-3.12-0.bpo.1-amd64  firmware-linux  firmware-bnx2x
 
 sudo reboot
 
