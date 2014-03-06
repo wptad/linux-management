@@ -116,3 +116,8 @@ each container conf and rootfs folder:
 /usr/local/var/lib/lxc/test/config 
 ```
 
+
+
+## Reference
+
+* <http://foaa.de/old-blog/2010/05/lxc-on-debian-squeeze/trackback/index.html>
