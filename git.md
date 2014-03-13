@@ -28,15 +28,6 @@ git config --global core.excludesfile "%USERPROFILE%\.gitignore"
 #git pull
 `git push origin remoteBranchName`
 
-#git branch
-
-* list branch 
-
-`git branch`
-
-* create new branch 
-
-`git branch newBranchName`
 
 
 
@@ -144,3 +135,120 @@ export LANG="C"
 export LC_MESSAGES="C"
 
 ```
+
+
+
+
+## Add remote repository
+
+```
+git remote add origin git@211.154.172.172:gitdemo.git
+```
+
+## push to remote
+
+```
+git push -u origin master
+```
+
+# tag
+
+* add tag
+
+```
+git tag -a '0.0.1' -m 'first tag'
+```
+
+* push single tag to remote
+
+```
+git push origin [tagname]
+```
+
+* push all tags to remote
+
+```
+git push [origin] --tags
+```
+
+* delete tag
+
+```
+git tag -d 0.1.3
+```
+
+* delete server tag
+
+```
+git push origin :refs/tags/0.1.3
+```
+
+# branch
+
+* list branch 
+
+```
+git branch
+```
+
+* create local branch 
+
+```
+git branch [BranchName]
+```
+
+* switch branch
+
+```
+git checkout [branchName]
+```
+
+* push to remote branch
+
+```
+git push origin [branchName]
+```
+
+OR
+
+```
+git push origin [localBranchName]:[remoteBranchName]
+```
+
+* checkout remote branch & switch to that branch
+
+```
+git checkout --track origin/[branchName]
+```
+
+* remove local branch
+
+```
+git branch -d [branchName]
+```
+
+
+* remove remote branch
+
+```
+git push origin :[branchName]
+```
+
+
+# merge
+
+* merge branch `hotfix` to `master`
+
+```
+git checkout master
+git merge --no-ff hotfix
+``` 
+
+* 全局添加--no-ff
+
+```
+git config --global --add merge.ff false
+
+```
+
+* refer: <http://stackoverflow.com/questions/2500296/can-i-make-fast-forwarding-be-off-by-default-in-git>
