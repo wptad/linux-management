@@ -197,6 +197,12 @@ git branch
 git branch [BranchName]
 ```
 
+* create branch_b based on branch_a
+
+```
+git branch -b [branch_b] [branch_a]
+```
+
 * switch branch
 
 ```
@@ -234,6 +240,22 @@ git branch -d [branchName]
 git push origin :[branchName]
 ```
 
+* rename local branch
+
+```
+git branch -m old_branch_name new_branch_name
+```
+
+* rename remote branch
+
+```
+git branch -m master master-old
+git push remote :master # delete master
+git push remote master-old # create master-old on remote
+git checkout -b master some-ref # create a new local master
+git push remote master # create master on remote
+
+```
 
 # merge
 
