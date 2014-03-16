@@ -151,6 +151,21 @@ git remote add origin git@211.154.172.172:gitdemo.git
 git push -u origin master
 ```
 
+# checkout 
+
+* create branch_b based on branch_a
+
+```
+git checkout -b [branch_b] [branch_a]
+```
+
+* checkout remote branch
+
+```
+git checkout --track origin/branchName
+```
+
+
 # tag
 
 * add tag
@@ -200,7 +215,7 @@ git branch [BranchName]
 * create branch_b based on branch_a
 
 ```
-git branch -b [branch_b] [branch_a]
+git checkout -b [branch_b] [branch_a]
 ```
 
 * switch branch
@@ -240,6 +255,12 @@ git branch -d [branchName]
 git push origin :[branchName]
 ```
 
+* sync remote deleted branch
+
+```
+git fetch -p
+```
+
 * rename local branch
 
 ```
@@ -274,3 +295,64 @@ git config --global --add merge.ff false
 ```
 
 * refer: <http://stackoverflow.com/questions/2500296/can-i-make-fast-forwarding-be-off-by-default-in-git>
+
+
+# stash
+
+* backup present workstage
+
+```
+git stash
+```
+
+* restore recent stash
+
+```
+git stash pop
+```
+
+* list all stashes
+
+```
+git stash list
+```
+
+* clean git stash
+
+```
+git stash clear
+```
+
+
+# reset
+
+```
+    git reset --hard <commit_id>
+    git push origin HEAD --force
+```
+
+
+```
+    根据–soft –mixed –hard，会对working tree和index和HEAD进行重置:
+    git reset –mixed：此为默认方式，不带任何参数的git reset，即时这种方式，它回退到某个版本，只保留源码，回退commit和index信息
+    git reset –soft：回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可
+    git reset –hard：彻底回退到某个版本，本地的源码也会变为上一个版本的内容
+
+
+    HEAD 最近一个提交
+    HEAD^ 上一次
+    <commit_id>  每次commit的SHA1值. 可以用git log 看到,也可以在页面上commit标签页里找到.
+
+```
+
+# revert
+
+* only revsert specific commit
+
+```
+git revert HEAD~3
+```
+
+
+
+
