@@ -62,7 +62,14 @@ $ sudo port select --set gcc mp-gcc46
 
 ## xcode develop path
 
+```
+sudo xcode-select -switch /Applications/Xcode.app
+```
 
-`sudo xcode-select -switch /Applications/Xcode.app`
+* reset 
+
+```
+sudo xcode-select --reset
+```
 
 * Reference: <http://stackoverflow.com/questions/11961032/xcrun-error-could-not-stat-active-xcode-path-volumes-xcode-xcode45-dp1-app-c>
