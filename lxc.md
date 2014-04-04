@@ -118,6 +118,25 @@ each container conf and rootfs folder:
 
 
 
+## multi-nic config
+
+```
+lxc.network.mtu = 1500
+lxc.network.type = veth
+lxc.network.name = eth0
+lxc.network.link = br0
+lxc.network.ipv4 = 192.168.0.2/16
+lxc.network.flags = up
+
+lxc.network.type = veth
+lxc.network.link = br1
+lxc.network.ipv4 = 10.10.0.2/16
+lxc.network.name = eth1
+lxc.network.flags = up
+
+
+```
+
 ## Reference
 
 * <http://foaa.de/old-blog/2010/05/lxc-on-debian-squeeze/trackback/index.html>

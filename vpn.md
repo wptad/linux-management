@@ -168,3 +168,9 @@ iptables -I FORWARD -p tcp --tcp-flags SYN,RST SYN -s 10.9.8.0/24 -j TCPMSS  --c
 
 
 * <http://code.google.com/p/chnroutes/>
+
+
+
+# L2TP
+
+* [ CentOS Linux VPS安装IPSec+L2TP VPN]<http://www.live-in.org/archives/818.html>
