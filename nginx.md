@@ -18,8 +18,12 @@ aptitude -t wheezy-backports install nginx-full
 proxy_set_header Host $http_host;
 proxy_set_header X-Forward-For $remote_addr;
 
-
 ```
+
+## socket.io
+
+* <http://michieldemey.be/blog/proxying-websockets-with-nginx-and-socket-io/>
+
 ## Nginx错误日志分析
 
 * <http://cjhust.blog.163.com/blog/static/175827157201271455831385/>
