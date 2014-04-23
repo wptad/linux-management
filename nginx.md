@@ -160,3 +160,23 @@ Others
 　　　　　　　　　　
 * Reference <http://wiki.nginx.org/HttpUpstreamModule>
 * From <http://tech.ddvip.com/2009-07/1246936747125436.html>
+
+
+## upstream too big problem
+
+在http里加上
+```
+proxy_buffer_size  128k;
+proxy_buffers   32 32k;
+proxy_busy_buffers_size 128k;
+
+```
+
+
+#module
+
+
+
+#HttpStubStatusModule
+
+<http://wiki.nginx.org/HttpStubStatusModule>
