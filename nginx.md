@@ -141,6 +141,7 @@ server 127.0.0.1:7070 backup;
 
 Others
 
+
 ```
 
 在需要使用负载均衡的server中增加
@@ -156,15 +157,21 @@ Others
 　　client_body_temp_path 设置记录文件的目录 可以设置最多3层目录
 　　location 对URL进行匹配.可以进行重定向或者进行新的代理 负载均衡　
 　　
-```　　
+```
+
+
+　　
 　　　　　　　　　　
 * Reference <http://wiki.nginx.org/HttpUpstreamModule>
+
+
 * From <http://tech.ddvip.com/2009-07/1246936747125436.html>
 
 
 ## upstream too big problem
 
 在http里加上
+
 ```
 proxy_buffer_size  128k;
 proxy_buffers   32 32k;
@@ -172,6 +179,16 @@ proxy_busy_buffers_size 128k;
 
 ```
 
+
+## 413 Request Entity Too Large
+
+在http里加上
+
+
+```
+client_max_body_size 20m;
+
+```
 
 #module
 
