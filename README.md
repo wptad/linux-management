@@ -1,3 +1,12 @@
+## grep 
+
+* binary data
+
+```
+grep -a "key" xxx.log
+```
+
+
 ## make large file
 
 ```

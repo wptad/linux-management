@@ -5,6 +5,13 @@
 <http://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/>
 
 
+## sshfs
+
+```
+brew install osxfuse  sshfs
+
+```
+
 ## 快捷键
 
 <http://jingyan.baidu.com/article/cbf0e500c8c17f2eaa2893ff.html>
