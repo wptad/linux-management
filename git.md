@@ -345,6 +345,12 @@ git stash clear
 
 ```
 
+# set remote head
+
+```
+ git remote set-head origin master
+```
+
 # revert
 
 * only revsert specific commit
@@ -353,6 +359,14 @@ git stash clear
 git revert HEAD~3
 ```
 
+# git stats generator
+
+* http://gitstats.sourceforge.net/
+
+```
+git clone git://github.com/hoxu/gitstats.git
+
+```
 
 
 
