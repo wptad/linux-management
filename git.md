@@ -86,13 +86,6 @@ git rm --cached test.txt
 *[http://blog.prosight.me/index.php/2009/07/274 创建和修改项目]
 
 
-#gitstats
-
-
-* <http://gitstats.sourceforge.net/>
-
-
-
 
 # git issue
 
@@ -345,10 +338,51 @@ git stash clear
 
 ```
 
-# set remote head
+# remote setting
+
+* set remote head
 
 ```
  git remote set-head origin master
+```
+
+* show status of remote
+
+```
+git remote show origin
+```
+
+* delete remote master from server
+* <http://danielcsgomes.com/tutorials/how-to-allow-remove-master-branch-from-git/#.U3BZpK2SxhU>
+
+
+```
+git push origin :master
+ 
+remote: error: By default, deleting the current branch is denied, because the next
+ 
+remote: error: 'git clone' won't result in any file checked out,
+causing confusion.
+remote: error:
+remote: error: You can set 'receive.denyDeleteCurrent' configuration variable to
+remote: error: 'warn' or 'ignore' in the remote repository to allow deleting the
+remote: error: current branch, with or without a warning message.
+remote: error:
+remote: error: To squelch this message, you can set it to 'refuse'.
+remote: error: refusing to delete the current branch: refs/heads/master
+To ssh://server_name/git/repository.git
+! [remote rejected] master (deletion of the current branch prohibited)
+error: failed to push some refs to 'ssh://server_name/git/repository.git'
+
+```
+
+By default the git server does not allow to delete the current branch (usually is the master branch) , but you can change this behavior by doing the following steps:
+
+```
+ssh git_server_ip -l root
+sudo -u git_user git config --system receive.denyDeleteCurrent warn
+sudo -u git_user git config --global receive.denyDeleteCurrent warn
+
 ```
 
 # revert
