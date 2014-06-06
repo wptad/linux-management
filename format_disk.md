@@ -1,19 +1,12 @@
 #format disk
 
 
-## ext4
-
-
-```
-mkfs.ext4 -O ^has_journal -t ext4 -b 4096 /dev/sdb1 
-```
-
 ## fdisk
 
 `fdisk /dev/sdb`
 
 ```
-Command (m for help): mkfs.ext2 -b 4096 -t ext2 /dev/sdb1
+Command (m for help):
 Command action
    a   toggle a bootable flag
    b   edit bsd disklabel
@@ -50,7 +43,15 @@ Calling ioctl() to re-read partition table.
 ```
 
 
-`mkfs.ext2 -b 4096 -t ext2 /dev/sdb1`
+## ext4
+
+
+```
+mkfs.ext4 -O ^has_journal -t ext4 -b 4096 /dev/sdb1 
+
+mkfs.ext2 -b 4096 -t ext2 /dev/sdb1
+
+```
 
 
 
