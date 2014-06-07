@@ -30,3 +30,33 @@ www     IN      A       10.10.11.200
 *       IN      A       10.10.11.200
 
 ```
+
+
+
+
+
+## FAQ
+
+* Host 27.173.150.66.in-addr.arpa not found: 5(REFUSED)
+
+```
+
+acl "trusted" {
+	192.168.0.0/16;
+	10.10.0.0/16;
+	localhost;
+	localnets;
+};
+
+options {
+	allow-recursion { any; };
+	allow-query { any; };
+	allow-query-cache { any; };	
+};
+
+
+```
+
+* Refer <http://www.linuxquestions.org/questions/linux-server-73/bind-refuses-queries-stumped-as-to-why-789332/>
+* <https://kb.isc.org/article/AA-00269/0/What-has-changed-in-the-behavior-of-allow-recursion-and-allow-query-cache.html>
+* <http://www.math.ucla.edu/~jimc/documents/bugfix/08-dns-query-denied.html>
