@@ -14,10 +14,10 @@ aptitude -t wheezy-backports install nginx-full
 ## Proxy set header
 
 ```
-
-proxy_set_header Host $http_host;
-proxy_set_header X-Forward-For $remote_addr;
-
+	proxy_set_header Host $http_host;
+	proxy_set_header X-Forward-For $remote_addr;
+        proxy_set_header Connection "";
+        proxy_http_version 1.1;
 ```
 
 ## socket.io
