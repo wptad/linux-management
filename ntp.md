@@ -22,3 +22,11 @@
   
   FROM: http://blog.linuxphp.org/archives/567/
 ```
+
+* change timezone
+
+
+```
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+```
