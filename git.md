@@ -403,4 +403,11 @@ git clone git://github.com/hoxu/gitstats.git
 ```
 
 
+# git model
+
+
+* 原文：<http://nvie.com/posts/a-successful-git-branching-model/>
+* 翻译：<http://www.oschina.net/translate/a-successful-git-branching-model>
+
+
 
