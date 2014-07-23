@@ -162,6 +162,9 @@ iptables -I FORWARD -p tcp --tcp-flags SYN,RST SYN -s 10.9.8.0/24 -j TCPMSS  --c
 
 ```
 
+iptables -t nat -I POSTROUTING -o eth1 -j MASQUERADE
+
+
 
 
 # Auto select route
