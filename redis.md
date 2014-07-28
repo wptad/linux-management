@@ -40,7 +40,17 @@ update your APT cache and install Redis.
 sudo apt-get update
 sudo apt-get install redis-server
 
+
 ```
 
 
 * Refer: <http://vvv.tobiassjosten.net/linux/installing-redis-on-ubuntu-with-apt/>
+
+
+
+### sysctl.conf
+
+```
+vm.overcommit_memory = 1
+
+```
