@@ -197,3 +197,18 @@ client_max_body_size 20m;
 #HttpStubStatusModule
 
 <http://wiki.nginx.org/HttpStubStatusModule>
+
+
+
+#LUA read file
+
+```
+ location @500 {                     
+        proxy_connect_timeout 120s;     
+                                        
+        content_by_lua '                
+            return ngx.exec("/500.html")
+        ';                              
+    }  
+    
+```
