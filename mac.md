@@ -80,3 +80,14 @@ sudo xcode-select --reset
 ```
 
 * Reference: <http://stackoverflow.com/questions/11961032/xcrun-error-could-not-stat-active-xcode-path-volumes-xcode-xcode45-dp1-app-c>
+
+
+
+
+## make install disk 
+
+
+```
+sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia --volume /Volumes/untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
+
+```

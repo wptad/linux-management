@@ -31,3 +31,24 @@ GRANT SELECT  ON *.* TO 'user02'@'%' IDENTIFIED by 'password2';
 
 ```
 
+## mac reset root password 
+
+```
+
+mysql/> UPDATE mysql.user SET Password=PASSWORD('root') WHERE User='root'
+
+
+terminal/> mysqladmin -u root password 'YOURPASSWORD'
+```
+
+## my.conf tuning 
+
+
+
+```
+
+
+```
+
+* <https://tools.percona.com/wizard/result>
+* <http://stackoverflow.com/questions/10905226/mysql-my-cnf-performance-tuning-recommendations>
