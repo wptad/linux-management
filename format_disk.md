@@ -53,6 +53,12 @@ mkfs.ext2 -b 4096 -t ext2 /dev/sdb1
 
 ```
 
+## fstab
+
+```
+/dev/sdb1       /hdd1   ext4    defaults,rw,auto,nouser,nodev,nosuid,noexec,noatime,nodiratime  0       0
+
+```
 
 
 ## check uuid
