@@ -72,6 +72,13 @@ refer:
 * <https://help.ubuntu.com/community/UsingUUID>
 
 
+## move log in hdd
+
+```
+/hdd1/log       /var/log  none  bind                                                            0       0
+
+```
+
 ## SSD
 
 * enable TRIM
