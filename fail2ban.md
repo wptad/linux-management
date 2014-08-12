@@ -9,7 +9,7 @@ sudo apt-get install fail2ban
 ## add white list
 
 
-* 
+* nano /etc/fail2ban/jail.conf 
 
 ```
 [DEFAULT]

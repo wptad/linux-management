@@ -1,5 +1,18 @@
 ## mysql
 
+
+## install in debian
+
+
+```
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install mysql-server mysql-client
+
+```
+
+*<https://ariejan.net/2007/12/12/how-to-install-mysql-on-ubuntudebian/>
+
 * initial 
 
 ``` 
@@ -32,6 +45,7 @@ GRANT SELECT  ON *.* TO 'user02'@'%' IDENTIFIED by 'password2';
 ```
 
 ## mac reset root password 
+
 
 ```
 
