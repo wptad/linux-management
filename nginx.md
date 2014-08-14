@@ -212,3 +212,23 @@ client_max_body_size 20m;
     }  
     
 ```
+
+
+## [emerg] 4894#0: host not found in upstream
+
+
+```
+server {
+        set $backend http://fdsafdsafdas.com;
+
+        listen       *:80;
+        server_name  test.com aaa.test.com;
+
+        location / {
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header host $host;
+                proxy_pass $backend;
+        }
+}
+```
+*<https://www.ruby-forum.com/topic/176580>
