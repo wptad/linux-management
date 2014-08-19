@@ -109,7 +109,7 @@ sudo reboot
 update-rc.d -f gdm3 remove 
 
 // enable GUI
-update-rc.d gdm3 default 
+update-rc.d gdm3 defaults 
 
 ```
 * <http://www.debianadmin.com/howto-boot-debian-in-text-mode-instead-of-graphical-mode-gui.html>
