@@ -19,7 +19,7 @@
   #!/bin/sh
   /usr/sbin/ntpdate time.nist.gov | logger -t NTP
   /sbin/hwclock -w
-  
+
   FROM: http://blog.linuxphp.org/archives/567/
 ```
 
@@ -31,6 +31,13 @@ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 ```
 
+* write time to bios
+
+
+```
+hwclock --systohc
+
+```
 
 
 ## FAQ: the NTP socket is in use
