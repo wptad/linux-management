@@ -30,3 +30,23 @@
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 ```
+
+
+
+## FAQ: the NTP socket is in use
+
+* Msg:
+
+```
+20 Aug 17:29:51 ntpdate[1748125]: the NTP socket is in use, exiting
+
+```
+
+* SOLUTION: 
+
+```
+ntpdate -u pool.ntp.org
+
+```
+
+* REFER: <http://superuser.com/questions/639202/updating-time-ntpdate3108-the-ntp-socket-is-in-use-exiting>
