@@ -10,7 +10,7 @@
 3,同步Internet时间,首先安装时间同步软件
   apt-get install ntpdate
 4,手动同步系统时间
-  ntpdate cn.pool.ntp.org
+  ntpdate -u cn.pool.ntp.org
 5,如果重新启动后时间不是Internet时间可采取以下方法
 法1.修改/etc/default目录下的ntpdate
   在配置文件中发现了它设定时间服务器为pool.ntp.org，
