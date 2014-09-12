@@ -1,5 +1,11 @@
 #dns
 
+## dig install
+
+```
+apt-get install dnsutils
+```
+
 
 ## clean DNS cache
 
