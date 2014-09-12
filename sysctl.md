@@ -1,20 +1,74 @@
 #sysctl
 
 
-```
-nf_conntrack: table full, dropping packet
+* ERROR LOG : `nf_conntrack: table full, dropping packet`
+
 
 ```
 
-```
-echo 256000 > /proc/sys/net/netfilter/nf_conntrack_max
+net.ipv4.netfilter.ip_conntrack_max = 655350
+net.ipv4.netfilter.ip_conntrack_tcp_timeout_established = 1200
+
+
+如果在执行sysctl -p 时提示错误 unknown key，那么表示内核版本比较高，参数名称已经改为
+
+net.netfilter.nf_conntrack_max = 655350
+net.netfilter.nf_conntrack_tcp_timeout_established = 1200
+
 
 OR
 
-echo "net.netfilter.nf_conntrack_max = 256000" >> /etc/sysctl.conf
-sysctl -p
+echo 256000 > /proc/sys/net/netfilter/nf_conntrack_max
 
 ```
+
+* 查看目前 ip_conntrack 配置的值
+
+```
+cat /proc/sys/net/ipv4/ip_conntrack_max
+cat /proc/sys/net/ipv4/netfilter/ip_conntrack_tcp_timeout_established
+
+```
+
+* 查看目前 ip_conntrack buffer 的使用状况
+
+```
+> cat /proc/sys/net/ipv4/netfilter/ip_conntrack_count
+> grep ip_conntrack /proc/slabinfo
+ip_conntrack       38358  64324    304   13    1 : tunables   54   27    8 : slabdata   4948   4948    216
+
+```
+
+* 其中各个数字的含义为：
+
+```
+38358 the number of currently active objects
+64324 the total number of available objects
+  304 the size of each object in bytes
+   13 the number of pages with at least one active object
+```
+
+
+* 查出目前 ip_conntrack 记录最多的前十名 IP
+
+```
+ cat /proc/net/ip_conntrack | cut -d ' ' -f 10 | cut -d '=' -f 2 | sort | uniq -c | sort -nr | head -n 10
+# 结果示例
+#   6801 127.0.0.1
+#   3993 122.224.190.62
+#   1101 183.28.42.100
+#   1004 222.73.254.95
+#    549 120.42.98.143
+#    483 114.135.81.206
+#    460 123.154.46.196
+#    431 222.242.121.122
+#    410 125.33.21.174
+#    312 222.211.218.59
+```
+
+
+
+* REFER: <http://blog.yorkgu.me/2012/02/09/kernel-nf_conntrack-table-full-dropping-packet/>
 
 
 
