@@ -1,6 +1,15 @@
 #format disk
 
 
+## Smartmontools
+
+```
+apt-get install smartmontools
+
+```
+
+* superblock恢复 <http://wenku.baidu.com/link?url=vDdhcgZZcLzYEiSYO0eZ3Ql_X8G55PI38t0KZ3zixQIJH4JdoU9CEhaLuzeND64FWQgRom4M2VVwHtx6Lm20n_YqEDs98aQa_XmGUc6o_DK>
+
 ## fdisk
 
 `fdisk /dev/sdb`
