@@ -47,6 +47,22 @@ Refer: <http://nginx.org/en/docs/http/server_names.html>
 error_page 502 /client/error.html;
 ```
 
+## status module
+
+```
+  location /nginx_status {
+        # Turn on nginx stats
+        stub_status on;
+        # I do not need logs for stats
+        access_log   off;
+        # Security: Only allow access from 192.168.1.100 IP #
+        allow 192.168.1.100;
+        # Send rest of the world to /dev/null #
+        deny all;
+   }
+ 
+
+```
 
 ## upstream  
 

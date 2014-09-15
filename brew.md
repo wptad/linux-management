@@ -29,3 +29,12 @@ brew info MODULE_NAME
 brew options MODULE_NAME
 
 ```
+
+### brew reinstall
+
+```
+brew reinstall MODULE_NAME
+
+eg: 
+brew reinstall nginx-full --with-status
+```
