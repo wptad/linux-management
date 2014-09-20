@@ -20,6 +20,15 @@ git config --global core.excludesfile "%USERPROFILE%\.gitignore"
 
 ```
 
+## default editor
+
+```
+git config --global core.editor "nano" 
+
+```
+
+* Refer <http://git-scm.com/book/en/Customizing-Git-Git-Configuration>
+
 
 #git push
 
