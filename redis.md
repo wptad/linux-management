@@ -14,14 +14,14 @@ deb-src http://packages.dotdeb.org squeeze all
 authenticate these repositories using their public key.
 
 ```
-wget -q -O - http://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
+wget -q -O - http://www.dotdeb.org/dotdeb.gpg | apt-key add -
 
 ```
 update your APT cache and install Redis.
 
 ```
-sudo apt-get update
-sudo apt-get install redis-server
+apt-get update
+apt-get install redis-server
 
 
 ```
