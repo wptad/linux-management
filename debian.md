@@ -85,7 +85,8 @@ aptitude search firmware | grep -E '^i'
 sudo apt-get update
 
 # Replace the linux-image, linux-headers, and firmware packages below with the ones you have installed.
-apt-get install -t wheezy-backports linux-image-3.12-0.bpo.1-amd64  linux-headers-3.12-0.bpo.1-amd64  firmware-linux  firmware-bnx2x
+
+apt-get install -t wheezy-backports linux-image-3.14-0.bpo.2-amd64 linux-headers-3.14-0.bpo.2-amd64 firmware-linux  firmware-bnx2x
 
 sudo reboot
 
