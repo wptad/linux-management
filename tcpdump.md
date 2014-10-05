@@ -1,5 +1,11 @@
 # Tcpdump
 
+### icmp & host
+```
+tcpdump -enX -i any host 114.242.248.34  and icmp
+
+```
+
 
 ## IOS
 
