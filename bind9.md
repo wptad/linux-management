@@ -2,6 +2,52 @@ bind9
 =========
 
 
+
+### hostname usage
+
+
+* /etc/resolv.conf
+
+```
+search localhost.
+
+```
+* and then setting for localhost
+
+
+```
+
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	localhost. root.localhost. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	localhost.
+@	IN	A	127.0.0.1
+@	IN	AAAA	::1
+srv1  IN      A       192.168.1.1
+
+```
+
+* ping test
+
+
+```
+> ping srv1
+64 bytes from 192.168.1.1: icmp_req=1 ttl=64 time=0.049 ms
+```
+
+
+
+### captive portal clients
+
+
 <https://doc.pfsense.org/index.php/Creating_a_DNS_Black_Hole_for_Captive_Portal_Clients>
 
 
