@@ -1,5 +1,43 @@
 #NIC
 
+## bond
+
+### install
+
+```
+apt-get install ifenslave
+```
+
+### interface config
+
+```
+auto bond0
+allow-hotplug bond0
+iface bond0 inet static
+	address 10.10.10.10
+	netmask 255.255.255.0
+	gateway 10.10.10.1
+	slaves eth0 eth1
+	bond_mode balance-alb
+	bond_miimon 100
+	bond_downdelay 200
+	bond_updelay 200
+	dns-nameservers 114.114.114.114
+```
+
+### check stats
+
+```
+cat /proc/net/bonding/bond0 
+```
+
+
+
+* debian Refer : <https://wiki.debian.org/Bonding>
+* Refer: <http://www.enterprisenetworkingplanet.com/linux_unix/article.php/3850636/Understanding-NIC-Bonding-with-Linux.htm>
+* Refer: <http://www.2cto.com/os/201403/283742.html>
+
+
 # install module command
 * modinfo MODULE_NAME
 * lsmod
