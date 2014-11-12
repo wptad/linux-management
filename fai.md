@@ -194,7 +194,53 @@ fai-chboot -IBv -u nfs://192.168.2.1/srv/fai/config default
 
 ```
 
+### make auto install ISO
 
+```
+cd /
+ # mirror folder
+mkdir /mir 
+ # make mirror
+fai-mirror -av /mir 
+fai-cd -m /mir yourname.iso
+
+```
+## CONFIG
+
+### package
+
+* `/srv/fai/config/package_config/FAIBASE`
+
+```
+add package name in the file
+```
+
+### disk
+
+
+* `/srv/fai/config/disk_config/FAIBASE`
+
+
+### custom script
+
+
+* `/srv/fai/config/scripts/LAST/50-misc `
+
+
+```
+
+ #fcopy
+ #将FAI服务器/srv/fai/nfsroot/live/filesystem.dir/目录下对应目录的内容得到到客户端对应目录，下面是将/srv/fai/nfsroot/live/filesystem.dir/etc/apt/l*.deb 文件复制到客户端/etc/apt目录中。
+ 
+fcopy -i /etc/apt/l*.deb 
+ 
+ #$ROOTCMD 
+ #用于在客户端本地执行的内容。
+ 
+ 
+$ROOTCMD echo "root:debian" | $ROOTCMD chpasswd
+
+```
 
 
 ### how generate password
@@ -217,4 +263,6 @@ and then use
 * hdd
 * passwd
 * hostname
-* 
+
+
+
