@@ -55,6 +55,13 @@ subnet 192.168.2.0 netmask 255.255.255.0 {
 
 * extract the file in `/srv/tftp/preseed/`
 
+``` 
+cd /srv/tftp/preseed/
+wget http://ftp.nl.debian.org/debian/dists/wheezy/main/installer-amd64/current/images/netboot/netboot.tar.gz
+tar xvf netboot.tar.gz 
+
+```
+
 * `nano /srv/tftp/preseed/pxelinux.cfg/default `
 
 
@@ -480,6 +487,11 @@ d-i debian-installer/exit/halt boolean true
 
 * [Offical: Automating the installation using preseeding](https://www.debian.org/releases/stable/i386/apbs02.html.en)
 * [preseed example ](https://www.debian.org/releases/sarge/example-preseed.txt)
+* <http://lackof.org/taggart/hacking/d-i_preseed/>
+* <https://fak3r.com/2011/08/18/howto-automate-debian-installs-with-preseed/>
+
+
+
 
 * log
 
