@@ -62,3 +62,12 @@ http://127.0.0.1:3142/apt-cacher/
 deb http://10.11.1.112:3142/debian wheezy main
 
 ```
+
+OR (recommend)
+
+
+* `sudo nano /etc/apt/apt.conf.d/01proxy`
+
+```
+Acquire::http::Proxy "http://<apt-cacher server>:3142";
+```
