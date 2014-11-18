@@ -175,3 +175,18 @@ vm.swappiness = 10
 # Switch to legacy memory layout to allow libhugetlbfs to do it's dirty tricks
 vm.legacy_va_layout = 1
 ```
+
+
+
+
+## sample
+
+```
+net.ipv4.tcp_tw_recycle = 0
+net.ipv4.tcp_tw_reuse = 0
+net.ipv4.ip_local_port_range = 1024  65535
+net.ipv4.tcp_max_tw_buckets = 10000
+net.ipv4.netfilter.ip_conntrack_max = 1024000
+```
+
+* REFER <http://huoding.com/2013/12/31/316>
