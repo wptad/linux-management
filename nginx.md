@@ -248,3 +248,10 @@ server {
 }
 ```
 *<https://www.ruby-forum.com/topic/176580>
+
+
+
+## log
+
+
+* REF <http://www.ttlsa.com/linux/the-nginx-log-configuration/>
