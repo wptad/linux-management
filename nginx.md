@@ -255,3 +255,11 @@ server {
 
 
 * REF <http://www.ttlsa.com/linux/the-nginx-log-configuration/>
+
+
+## redirect 
+
+```
+	server_name ~^([-_a-z0-9]+).abc.com;
+	return 301 $scheme://$domain.def.com$uri$is_args$query_string;
+```
