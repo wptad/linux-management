@@ -83,6 +83,26 @@ www     IN      A       10.10.11.200
 
 ## FAQ
 
+
+* Named: error (broken trust chain)
+
+
+```
+named.conf.options
+
+dnssec-enable yes;
+dnssec-validation yes;
+dnssec-lookaside auto;
+
+change into: 
+
+dnssec-enable no;
+dnssec-validation no;
+
+```
+
+REFER: <http://pewetheb.blogspot.com/2013/11/named-error-broken-trust-chain.html>
+
 * Host 27.173.150.66.in-addr.arpa not found: 5(REFUSED)
 
 ```
