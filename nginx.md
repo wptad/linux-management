@@ -255,3 +255,25 @@ server {
 
 
 * REF <http://www.ttlsa.com/linux/the-nginx-log-configuration/>
+
+
+## FAQ
+
+### (13: Permission denied) while connecting to upstream:[nginx]
+
+* check
+
+```
+sudo cat /var/log/audit/audit.log | grep nginx | grep denied
+
+```
+
+* method:
+
+```
+sudo cat /var/log/audit/audit.log | grep nginx | grep denied | audit2allow -M mynginx
+sudo semodule -i mynginx.pp
+```
+
+* <http://stackoverflow.com/questions/23948527/13-permission-denied-while-connecting-to-upstreamnginx>
+
