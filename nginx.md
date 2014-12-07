@@ -277,3 +277,9 @@ sudo semodule -i mynginx.pp
 
 * <http://stackoverflow.com/questions/23948527/13-permission-denied-while-connecting-to-upstreamnginx>
 
+## redirect 
+
+```
+	server_name ~^([-_a-z0-9]+).abc.com;
+	return 301 $scheme://$domain.def.com$uri$is_args$query_string;
+```

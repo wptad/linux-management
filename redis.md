@@ -37,3 +37,19 @@ apt-get install redis-server
 vm.overcommit_memory = 1
 
 ```
+
+
+
+### install troubleshooting
+
+```
+zmalloc.h:50:31: fatal error: jemalloc/jemalloc.h: No such file or directory
+```
+
+Solution: 
+```
+cd deps
+make hiredis jemalloc linenoise lua
+cd ..
+make install
+```
