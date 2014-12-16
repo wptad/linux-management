@@ -1,6 +1,21 @@
 #format disk
 
 
+## tools
+
+```
+#check hdd features
+dumpe2fs /dev/md0 
+debugfs -R features /dev/sda1
+
+# change some features
+tune2fs -O ^has_journal /dev/sda1
+
+# check hdd 
+e2fsck -f /dev/sda1
+
+```
+
 ## Smartmontools
 
 ```
