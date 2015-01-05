@@ -28,10 +28,21 @@ On the server side run
 ```
 socat TCP4-LISTEN:7777 EXEC:/usr/lib/sftp-server
 ```
+
+```
+socat TCP4-LISTEN:7777,fork EXEC:/usr/lib/sftp-server
+
+```
+
 And on the client side
 
 ```
 sshfs -o directport=7777 remote:/dir /local/dir
+OR
+
+#read only 
+sshfs -o ro -o directport=7777 remote:/dir /local/dir
+
 ```
 
 
