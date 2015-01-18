@@ -419,4 +419,19 @@ git clone git://github.com/hoxu/gitstats.git
 * 翻译：<http://www.oschina.net/translate/a-successful-git-branching-model>
 
 
+## git remote config
+
+* problem
+
+```
+[remote rejected] master -> master (branch is currently checked out)
+```
+* fix method
+
+```
+[core]
+        bare = true
+```
+
+
 
