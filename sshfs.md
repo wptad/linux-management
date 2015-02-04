@@ -5,7 +5,7 @@
 
 
 ```
-apt-get install debian -y
+apt-get install sshfs -y
 ```
 
 ## usage
