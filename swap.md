@@ -27,5 +27,13 @@ free && sync && echo 3 > /proc/sys/vm/drop_caches && free
 
 ```
 
+### free swap
+
+```
+swapoff -a
+swapon -a
+
+```
+
 
 * <http://unix.stackexchange.com/questions/87908/how-do-you-empty-the-buffers-and-cache-on-a-linux-system>
