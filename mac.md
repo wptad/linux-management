@@ -1,5 +1,11 @@
 #Mac
 
+## brew cache folder
+
+```
+/Library/Caches/Homebrew/
+```
+
 ## Install and Use GNU Command Line Tools in Mac OS X
 
 <http://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/>
