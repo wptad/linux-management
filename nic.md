@@ -1,5 +1,17 @@
 #NIC
 
+## ring buffer
+
+```
+## view
+ethtool -g eth0
+## modify
+ethtool -G eth0 tx 1024
+## view infomation
+ethtool -S eth0
+```
+
+
 ## ifconfig
 
 * promisc mode
