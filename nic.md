@@ -1,5 +1,14 @@
 #NIC
 
+## ifconfig
+
+* promisc mode
+
+```
+ ifconfig eth0 promisc
+ ifconfig eth0 -promisc
+```
+
 ## bond
 
 ### install
