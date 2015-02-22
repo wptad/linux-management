@@ -404,7 +404,26 @@ iptables -t nat -I POSTROUTING -o eth1 -j MASQUERADE
 
 * <http://code.google.com/p/chnroutes/>
 
+## openvpn conf
 
+```
+client
+dev tun
+proto udp
+remote 211.11.11.11 1194
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca ca.crt
+cert tad.crt
+key tad.key
+comp-lzo
+verb 3
+## redirect all traffic
+redirect-gateway
+
+```
 
 # L2TP
 
