@@ -10,6 +10,8 @@ add net.ipv4.tcp_tw_recycle = 1 to /etc/sysctl.conf .
 
 ```
 
+REF: <https://engineering.gosquared.com/optimising-nginx-node-js-and-networking-for-heavy-workloads>
+
 
 * ERROR LOG : `nf_conntrack: table full, dropping packet`
 
