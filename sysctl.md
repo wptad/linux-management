@@ -1,5 +1,15 @@
 #sysctl
 
+## too many TIME_WAIT
+
+```
+
+# echo 1 > /proc/sys/net/ipv4/tcp_tw_recycle
+or
+add net.ipv4.tcp_tw_recycle = 1 to /etc/sysctl.conf .
+
+```
+
 
 * ERROR LOG : `nf_conntrack: table full, dropping packet`
 
