@@ -1,4 +1,12 @@
+
 #format disk
+## format gtp harddisk
+
+* parted, gdisk
+
+## script fdisk
+
+* sfdisk
 
 
 ## tools
