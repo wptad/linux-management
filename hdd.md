@@ -1,5 +1,14 @@
 
 #format disk
+
+
+## benchmark
+
+```
+dd bs=100M count=10 if=/dev/zero of=test111111 oflag=dsync  
+```
+* REF<https://romanrm.net/dd-benchmark>
+
 ## format gtp harddisk
 
 * parted, gdisk
