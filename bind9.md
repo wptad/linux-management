@@ -123,6 +123,22 @@ options {
 
 ```
 
+
+### troubleshooting
+
+
+* query denied
+
+```
+Mar 28 16:26:20 srv1-1 named[21574]: client 10.11.2.3#40071: query (cache) 'baidu.com/A/IN' denied
+```
+nano /etc/bind/named.conf.options 
+append:
+```
+allow-query { any; };
+
+```
+
 * <https://help.ubuntu.com/community/BIND9ServerHowto> 
 * Refer <http://www.linuxquestions.org/questions/linux-server-73/bind-refuses-queries-stumped-as-to-why-789332/>
 * <https://kb.isc.org/article/AA-00269/0/What-has-changed-in-the-behavior-of-allow-recursion-and-allow-query-cache.html>
