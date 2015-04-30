@@ -11,6 +11,9 @@ dd bs=100M count=10 if=/dev/zero of=test111111 oflag=dsync
 
 ## format gtp harddisk
 
+```
+sudo parted /dev/sda --script mklabel gpt  mkpart primary ext4 0% 100% 
+```
 * parted, gdisk
 
 ## script fdisk
