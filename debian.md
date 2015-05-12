@@ -2,6 +2,22 @@
 
 ## debian Chinese apt source
 
+* aliyun
+
+```
+deb http://mirrors.aliyun.com/debian wheezy main contrib non-free
+deb-src http://mirrors.aliyun.com/debian wheezy main contrib non-free
+
+deb http://mirrors.aliyun.com/debian wheezy-updates main contrib non-free
+deb-src http://mirrors.aliyun.com/debian wheezy-updates main contrib non-free
+
+deb http://mirrors.aliyun.com/debian-security wheezy/updates main contrib non-free
+deb-src http://mirrors.aliyun.com/debian-security wheezy/updates main contrib non-free
+
+```
+
+* cn
+
 ```
 deb http://ftp.cn.debian.org/debian wheezy main
 deb-src http://ftp.cn.debian.org/debian wheezy main
