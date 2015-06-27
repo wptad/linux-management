@@ -142,3 +142,14 @@ tmpfs   /memflode  tmpfs   defaults,size=1g       0       0
 
 * <http://backdrift.org/how-to-use-bind-mounts-in-linux>
 * <http://www.cnitblog.com/gouzhuang/archive/2010/04/21/mount_bind.html>
+
+
+
+
+
+## check hdd
+
+```
+apt-get install smartmontools
+smartctl /dev/sda -a
+```
