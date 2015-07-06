@@ -18,3 +18,10 @@ Match Address *,!10.11.0.0/16
 	PermitRootLogin no
 
 ```
+
+
+
+## Force SSH Client To Use Given Private Key ( identity file )
+
+
+* <http://www.cyberciti.biz/faq/force-ssh-client-to-use-given-private-key-identity-file/>
