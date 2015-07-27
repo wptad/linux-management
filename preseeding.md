@@ -1,6 +1,12 @@
 # preseeding
 
 
+### preseed
+
+[full document of installation](https://www.debian.org/releases/stable/i386/install.pdf.en)
+
+https://www.debian.org/releases/wheezy/i386/apbs02.html.en
+
 
 
 ### TFTP
