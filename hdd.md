@@ -2,6 +2,10 @@
 #format disk
 
 
+## RAID
+
+* <http://zackreed.me/articles/38-software-raid-5-in-debian-with-mdadm>
+
 ## benchmark
 
 ```
