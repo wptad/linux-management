@@ -1,5 +1,14 @@
 #Mac
 
+## mtr install
+
+```
+brew install mtr
+cd /usr/local/sbin
+sudo chown root mtr
+sudo chmod u+s mtr
+```
+
 ## brew cache folder
 
 ```
