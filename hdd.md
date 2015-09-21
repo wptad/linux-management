@@ -157,3 +157,50 @@ tmpfs   /memflode  tmpfs   defaults,size=1g       0       0
 apt-get install smartmontools
 smartctl /dev/sda -a
 ```
+
+
+## systemd-mount-disk 
+
+
+```
+* Fleet zone reduce !
+
+
+parted /dev/sda --script mklabel gpt  mkpart primary ext4 0% 100% 
+mkfs.ext4 -t ext4 -b 4096 /dev/sda1 
+mkdir /hdd1
+
+cat > /etc/systemd/system/hdd1.mount <<-EOF
+[Unit]
+Description=Mount hdd1
+Before=docker.service
+[Mount]
+What=/dev/sda1
+Where=/hdd1
+Type=ext4
+Options=discard,errors=remount-ro
+[Install] 
+WantedBy=multi-user.target
+EOF
+
+systemctl enable hdd1.mount
+
+
+cat > /etc/systemd/system/var-lib-docker.mount <<-EOF
+[Unit]
+Description=bind docker folder
+Before=docker.service
+After=hdd1.mount
+[Mount]
+What=/hdd1/docker
+Where=/var/lib/docker
+Type=none
+Options=bind
+[Install] 
+WantedBy=multi-user.target
+EOF
+
+systemctl enable var-lib-docker.mount
+mount -a 
+
+```
