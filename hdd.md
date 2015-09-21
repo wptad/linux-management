@@ -163,8 +163,6 @@ smartctl /dev/sda -a
 
 
 ```
-* Fleet zone reduce !
-
 
 parted /dev/sda --script mklabel gpt  mkpart primary ext4 0% 100% 
 mkfs.ext4 -t ext4 -b 4096 /dev/sda1 
