@@ -177,3 +177,11 @@ iface br0 inet static
 
 
 ```
+
+
+### network nic rename
+
+
+```
+/etc/udev/rules.d/70-persistent-net.rules
+```
