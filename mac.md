@@ -107,3 +107,12 @@ sudo xcode-select --reset
 sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia --volume /Volumes/untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
 
 ```
+
+
+## copy terminal output to clipboard
+
+```
+
+echo "Hello world" | pbcopy
+```
+
