@@ -18,3 +18,11 @@ rsync -abv --remove-source-files /media/localbackup/* /media/remotebackup/
 ```
  ls -1 -d /hdd1/log/* |parallel -X rsync -abv --remove-source-files {} /hdd2/log/
 ```
+
+
+### run it in background
+```
+nohup command > nohup.log 
+Control + z
+bg
+```
