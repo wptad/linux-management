@@ -1,6 +1,26 @@
 
 # network test
 
+## 获取当前公网ip地址：
+
+```
+curl ifconfig.co
+wget -qO - ifconfig.co
+```
+
+## 获取当前网络所属country：
+
+```
+curl ifconfig.co/country
+wget -qO - ifconfig.co/country
+```
+
+## 获取当前网络所属country-iso：
+
+```
+curl ifconfig.co/country-iso
+wget -qO - ifconfig.co/country-iso
+```
 
 ## ping
 
