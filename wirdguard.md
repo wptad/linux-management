@@ -1,3 +1,35 @@
+# operation
+
+## client
+
+/etc/wireguard/wg0.conf 
+```
+[Interface]
+Address = 
+PrivateKey = 
+DNS = 
+MTU = 1450
+
+[Peer]
+PublicKey = 
+PresharedKey = 
+AllowedIPs = 
+Endpoint = 
+PersistentKeepalive = 
+```
+
+```
+# status
+systemctl status wg-quick@wg0
+# start
+systemctl start wg-quick@wg0
+# enable
+systemctl enable wg-quick@wg0
+```
+
+# install
+
+
 
 UP: 
 
