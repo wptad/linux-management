@@ -460,4 +460,10 @@ git clone git://github.com/hoxu/gitstats.git
 ```
 
 
+## set default push remote upstream
+
+```
+git push --set-upstream remote-name your-branch-name
+
+```
 
