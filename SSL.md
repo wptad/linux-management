@@ -42,3 +42,9 @@ export Ali_Secret=""
 
 ```
 ### 6. reload nginx
+
+# refer
+- [阿里云域名使用ACME自动申请免费的通配符https域名证书
+](https://developers.weixin.qq.com/community/develop/article/doc/0008ae40ca0af83d0d7e3bb6b56013)
+- [官方文档](https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E)
+- [Docker工具](https://github.com/nginx-proxy/acme-companion?tab=readme-ov-file)
