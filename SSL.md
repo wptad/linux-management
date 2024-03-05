@@ -8,6 +8,12 @@
 curl https://get.acme.sh | sh -s email=yourname@domain.com 
 ```
 
+更新的脚本：
+```
+acme.sh --upgrade
+
+```
+
 ### 1. 创建Aliyun子账号，申请api key 
 
 ### 2. 权限为： 
