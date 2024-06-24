@@ -25,10 +25,19 @@ ray start --head --num-cpus=0 --port=6380 --dashboard-host=0.0.0.0 --block
 
 ### ray woker 启动脚本 
 - dorker下，使用--net=host模式
+- 可能需要增加ulimit，可以通过脚本执行，也可以通过docker设置
 
 ```
 ray start --address=RAY_ADDRESS:6380 --block
-
+```
+### 设置ulimit
+#### command
+```
+ulimit -n 10240 && ulimit -a && ray start --address=RAY_ADDRESS:6380 --block
+```
+#### docker
+```
+docker run --ulimit nofile=10240:10240
 ```
 
 
