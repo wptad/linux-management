@@ -45,3 +45,36 @@ docker run --ulimit nofile=10240:10240
 - ray的head，client，以及worker都指定同一个版本，任一个模板不匹配就会出问题
 - ray的dashboard: 127.0.0.1:8265
 - ray的服务address: 127.0.0.1:10001
+
+
+### python client example
+
+```
+import ray
+from collections import Counter
+import socket
+import time
+
+ray.init(address="ray://RAY_ADDRESS:10001")
+
+print('''This cluster consists of
+    {} nodes in total
+    {} CPU resources in total
+'''.format(len(ray.nodes()), ray.cluster_resources()['CPU']))
+
+@ray.remote
+def f():
+    time.sleep(0.001)
+    # Return IP address.
+    return socket.gethostbyname(socket.gethostname())
+    # return socket.gethostbyname("localhost")
+
+object_ids = [f.remote() for _ in range(100)]
+ip_addresses = ray.get(object_ids)
+
+print('Tasks executed')
+for ip_address, num_tasks in Counter(ip_addresses).items():
+    print('    {} tasks on {}'.format(num_tasks, ip_address))
+
+
+```
