@@ -1,3 +1,15 @@
+# wg-easy
+
+## Automatically restart in case of DNS failure
+
+nano /lib/systemd/system/wg-quick@.service
+
+```
+[Service]
+Restart=on-failure
+RestartSec=5s
+```
+
 # operation
 
 ## client
